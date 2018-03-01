@@ -1,16 +1,16 @@
-Sign into AWS
+1. Sign into AWS
 
-Open EC2
+2. Open EC2
 
-Click Instances on Left Side
+3. Click Instances on Left Side
 
-Click "Launch Instance"
+4. Click "Launch Instance"
 
-Select "Amazon Linux AMI 2016.09.1 (HVM), SSD Volume Type"
+5. Select "Amazon Linux AMI 2016.09.1 (HVM), SSD Volume Type"
 
-Select Free Tier
+6. Select Free Tier
 
-Click review and launch
+7. Click review and launch
 
 Press Launch
 
