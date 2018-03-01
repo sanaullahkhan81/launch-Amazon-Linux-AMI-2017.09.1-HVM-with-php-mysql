@@ -12,61 +12,61 @@
 
 7. Click review and launch
 
-Press Launch
+8. Press Launch
 
-Create Pair
+9. Create Pair
 
-Download Pair
+10. Download Pair
 
-Launch Instance
+11. Launch Instance
 
-Open list of Instances
+12. Open list of Instances
 
-Swap in your file name: chmod 400 ServerPair.pem
+13. Swap in your file name: ```chmod 400 ServerPair.pem```
 
-Swap in your file name and ip address: ssh -i "ServerPair.pem" ec2-user@ec2-54-152-134-146.compute-1.amazonaws.com
+14. Swap in your file name and ip address: ```ssh -i "ServerPair.pem" ec2-user@ec2-54-152-134-146.compute-1.amazonaws.com```
 
-Update your instance sudo yum update -y
+15. Update your instance ```sudo yum update -y```
 
-Install Apache Web Server, MySQL, PHP sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
+16. Install Apache Web Server, MySQL, PHP sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
 
-Start the Apache Web Server sudo service httpd start
+17. Start the Apache Web Server sudo service httpd start
 
-Make it so Apache Web Server runs on server boot: sudo chkconfig httpd on
+18. Make it so Apache Web Server runs on server boot: ```sudo chkconfig httpd on```
 
-Verify it with: chkconfig --list httpd and httpd 0:off 1:off 2:on 3:on 4:on 5:on 6:off
+19. Verify it with: ```chkconfig --list httpd and httpd 0:off 1:off 2:on 3:on 4:on 5:on 6:off```
 
-Go to your Public DNS or IPv4 Public IP: Example: ec2-54-152-134-146.compute-1.amazonaws.com
+20. Go to your Public DNS or IPv4 Public IP: Example: ec2-54-152-134-146.compute-1.amazonaws.com
 
-Create a new user group sudo groupadd www
+21. Create a new user group ```sudo groupadd www```
 
-Add our EC2 User to this group sudo usermod -a -G www ec2-user
+22. Add our EC2 User to this group ```sudo usermod -a -G www ec2-user```
 
-Leave the current session exit
+23. Leave the current session exit
 
-Sign back in. Swap in your file name and ip address: ssh -i "ServerPair.pem" ec2-user@ec2-54-152-134-146.compute-1.amazonaws.com
+24. Sign back in. Swap in your file name and ip address: ```ssh -i "ServerPair.pem" ec2-user@ec2-54-152-134-146.compute-1.amazonaws.com```
 
-Verify www exists by running: groups
+25. Verify www exists by running: groups
 
-Give www permission on server files /var/www with sudo chown -R root:www /var/www
+26. Give www permission on server files /var/www with ```sudo chown -R root:www /var/www```
 
-Change file permissions: sudo chmod 2775 /var/www and find /var/www -type d -exec sudo chmod 2775 {} \;
+27. Change file permissions: sudo chmod 2775 /var/www and ```find /var/www -type d -exec sudo chmod 2775 {} \;```
 
-Add a index.html in var/www/html so touch /var/www/html/index.html and vi /var/www/html/index.html then add content.
+28. Add a index.html in var/www/html so touch /var/www/html/index.html and ```vi /var/www/html/index.html``` then add content.
 
-Go back to Instances (like the list)
+29. Go back to Instances (like the list)
 
-Right click on your new instance, select Networking, then Change Security Group
+30. Right click on your new instance, select Networking, then Change Security Group
 
-Take note of which one is selected
+31. Take note of which one is selected
 
-Open Security Groups on the left side: https://console.aws.amazon.com/ec2/
+32. Open Security Groups on the left side: https://console.aws.amazon.com/ec2/
 
-Edit the Inbound rules for that security group already assigned.
+33. Edit the Inbound rules for that security group already assigned.
 
-Add Rule and set the type to be HTTP
+34. Add Rule and set the type to be HTTP
 
-Files sit in ls -l /var/www
+35. Files sit in ```ls -l /var/www```
 
-Go to your IPv4 and you should see Hello World!
+36. Go to your IPv4 and you should see Hello World!
 
