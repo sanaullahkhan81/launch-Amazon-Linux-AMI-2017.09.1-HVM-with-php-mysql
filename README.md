@@ -28,7 +28,7 @@
 
 15. Update your instance ```sudo yum update -y```
 
-16. Install Apache Web Server, MySQL, PHP sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd
+16. Install Apache Web Server, MySQL, PHP ```sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd```
 
 17. Start the Apache Web Server sudo service httpd start
 
@@ -46,7 +46,7 @@
 
 24. Sign back in. Swap in your file name and ip address: ```ssh -i "ServerPair.pem" ec2-user@ec2-54-152-134-146.compute-1.amazonaws.com```
 
-25. Verify www exists by running: groups
+25. Verify www exists by running: ```groups```
 
 26. Give www permission on server files /var/www with ```sudo chown -R root:www /var/www```
 
