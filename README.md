@@ -30,7 +30,7 @@
 
 16. Install Apache Web Server, MySQL, PHP ```sudo yum install -y httpd24 php70 mysql56-server php70-mysqlnd```
 
-17. Start the Apache Web Server sudo service httpd start
+17. Start the Apache Web Server ```sudo service httpd start```
 
 18. Make it so Apache Web Server runs on server boot: ```sudo chkconfig httpd on```
 
